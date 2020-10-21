@@ -1,6 +1,6 @@
-package banca.domain.exception;
+package banca.domain.exceptions;
 
-import banca.*;
+import banca.domain.*;
 
 public class SaldoInsufficenteException extends Exception {
   private int id;
