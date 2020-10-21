@@ -1,7 +1,7 @@
 package banca.domain;
 
 import banca.domain.*;
-import banca.domain.exception.*;
+import banca.domain.exceptions.*;
 import java.util.*;
 
 public abstract class ContoCorrente {
@@ -23,12 +23,21 @@ public abstract class ContoCorrente {
     return this.saldo; 
   }
 
+  public void setSaldo ( double saldo ) {
+    this.saldo = saldo; 
+  }
   
   /*
       Metodi Base del Conto 
   */
+
   // Metodo astratto deposita
   public abstract void deposita ( double amount );
+
+  // Metodo non astratto bonifico
+  public void bonifico ( double amount, ContoCorrente contoDestinatario ) throws SaldoInsufficenteException{
+    this.preleva(amount); contoDestinatario.deposita(amount);
+  }
 
   // Metodo non astratto preleva
   public void preleva ( double amount ) throws SaldoInsufficenteException {

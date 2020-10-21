@@ -24,6 +24,15 @@ public class Cliente {
     conti = new HashMap<Integer,ContoCorrente>(); 
   }
 
+  public int getID () {
+    return this.id; 
+  }
+  
+  // Ottieni il conto con l'id n
+  public ContoCorrente getContoById ( int idConto ) {
+    return conti.get(idConto);
+  }
+
   public void aggiungiConto ( ContoCorrente c ) {
      // Utilizzando la keyword this sto chiamando l'oggetto su cui sto lavorando in questo momento
     // c.setCliente(this); Codice da ricontrollare un attimo
@@ -61,8 +70,4 @@ public class Cliente {
     return sb.toString();
     // Ritorno al Stringa contenuta nello String builder
   }
-
-
-
-
 }

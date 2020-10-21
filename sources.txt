@@ -1,0 +1,10 @@
+./banca/domain/Sesso.java
+./banca/domain/ContoItaliano.java
+./banca/domain/BancaEnum.java
+./banca/domain/ContoCorrente.java
+./banca/domain/ContoCayman.java
+./banca/domain/Cliente.java
+./banca/domain/Banca.java
+./banca/exceptions/SaldoInsufficenteException.java
+./banca/ui/SportelloBanca.java
+./Main.java
