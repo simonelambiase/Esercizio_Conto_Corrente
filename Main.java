@@ -1,5 +1,5 @@
 class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+    // Poi inseriamo i metodi da avviare nel Main appena ci siamo
   }
 }
