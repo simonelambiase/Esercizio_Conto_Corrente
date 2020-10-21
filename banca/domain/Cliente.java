@@ -1,7 +1,6 @@
 package banca.domain;
 
-import banca.domain.Sesso;
-import banca.domain.ContoCorrente;
+import banca.domain.*;
 
 public class Cliente {
   // Campi del Oggetto
@@ -23,5 +22,16 @@ public class Cliente {
     conti = new HashMap<Integer,ContoCorrente>(); 
   }
 
-  
+  public void aggiungiConto ( ContoCorrente c ) {
+    c.setCliente(this); // Utilizzando la keyword this sto chiamando l'oggetto su cui sto lavorando in questo momento
+    conti.put(c.getId(), c);
+  }
+
+  public void rimuoviConto ( int id_conto ) {
+    conti.remove(id_conto);
+  }
+
+
+
+
 }

@@ -1,5 +1,7 @@
 package banca.domain.exception;
 
+import banca.*;
+
 public class SaldoInsufficenteException extends Exception {
   private int id;
   private double saldo; 

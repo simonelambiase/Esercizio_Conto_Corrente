@@ -1,6 +1,6 @@
-package banca.model;
+package banca.domain;
 
-import banca.domain.exception.SaldoInsufficenteException;
+import banca.domain.*;
 
 public abstract class ContoCorrente {
   // Campi della classe Astratta ContoCorrente
@@ -32,5 +32,9 @@ public abstract class ContoCorrente {
       throw new SaldoInsufficenteException(this.saldo, amount, this.id ); 
     }
     this.saldo -= amount; 
+  }
+  // Metodo per dare un conto ad un cliente
+  public void setCliente ( ContoCorrente c ) {
+    
   }
 }
