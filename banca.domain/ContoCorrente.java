@@ -29,8 +29,8 @@ public abstract class ContoCorrente {
   // Metodo non astratto preleva
   public void preleva ( double amount ) throws SaldoInsufficenteException {
     if ( amount > this.saldo ) {
-      throw new SaldoInsufficenteException(this.saldo, this.amount, this.id ); 
+      throw new SaldoInsufficenteException(this.saldo, amount, this.id ); 
     }
-    this.saldo -= prelievo; 
+    this.saldo -= amount; 
   }
 }
